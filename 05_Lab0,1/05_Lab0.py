@@ -1,0 +1,85 @@
+import turtle
+import random
+colors = ["Royal Blue", "Pale Green", "Gold", "Rosy Brown", "Coral", "Orchid"]
+shape = input("What shape?\na. rectangle\nb. circle\nc. random\n")
+n = int(input("How many?"))
+
+turtle.speed(0)
+if shape == "a":
+    for _ in range(n):  
+        x = random.randint(-400,400)
+        y = random.randint(-400,400)
+        an = random.randint(-180,180)
+        a = random.randint(20,100)
+        b = random.randint(20,100)
+        w = random.randint(5,10)
+        turtle.up()
+        turtle.color(random.choice(colors),random.choice(colors))
+        turtle.goto(x,y)
+        turtle.left(an)
+        turtle.down()
+        turtle.width(w)
+        turtle.begin_fill()
+        for _ in range(2):
+            turtle.forward(a)
+            turtle.left(90)
+            turtle.forward(b)
+            turtle.left(90)
+        turtle.end_fill()
+
+if shape == "b":
+    for _ in range(n):  
+        x = random.randint(-400,400)
+        y = random.randint(-400,400)
+        an = random.randint(-180,180)
+        r = random.randint(10,50)
+        w = random.randint(5,10)
+        turtle.up()
+        turtle.color(random.choice(colors),random.choice(colors))
+        turtle.goto(x,y)
+        turtle.left(an)
+        turtle.down()
+        turtle.width(w)
+        turtle.begin_fill()
+        turtle.circle(r)
+        turtle.end_fill()
+
+if shape == "c":
+    for _ in range(n):
+        cho = random.choice(["a","b"])
+        if cho == "a":
+            x = random.randint(-200,200)
+            y = random.randint(-200,200)
+            an = random.randint(-180,180)
+            a = random.randint(20,100)
+            b = random.randint(20,100)
+            w = random.randint(5,10)
+            turtle.up()
+            turtle.color(random.choice(colors),random.choice(colors))
+            turtle.goto(x,y)
+            turtle.left(an)
+            turtle.down()
+            turtle.width(w)
+            turtle.begin_fill()
+            for _ in range(2):
+                turtle.forward(a)
+                turtle.left(90)
+                turtle.forward(b)
+                turtle.left(90)
+            turtle.end_fill()
+        if cho == "b":
+            x = random.randint(-200,200)
+            y = random.randint(-200,200)
+            an = random.randint(-180,180)
+            r = random.randint(10,50)
+            w = random.randint(5,10)
+            turtle.up()
+            turtle.color(random.choice(colors),random.choice(colors))
+            turtle.goto(x,y)
+            turtle.left(an)
+            turtle.down()
+            turtle.width(w)
+            turtle.begin_fill()
+            turtle.circle(r)
+            turtle.end_fill()
+turtle.done()

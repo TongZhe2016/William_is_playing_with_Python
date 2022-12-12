@@ -1,0 +1,6 @@
+print("Hello")
+name = input("Who are you?")
+age = input("How old are you?")
+age_number = int(age)
+print("Nice to meet you,",name)
+print("You must be",age_number - 5,"years old!")
